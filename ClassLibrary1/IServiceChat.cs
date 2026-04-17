@@ -7,18 +7,18 @@ namespace ClassLibrary1
   public interface IServiceChat
   {
     [OperationContract]
-    int Connect();
+    int Connect(string name);
 
     [OperationContract]
     void Disconnect(int id);
 
     [OperationContract(IsOneWay = true)]
-    void SendMsg(string msg);
+    void SendMsg(string msg, int id);
   }
 
   public interface IServerChatCallback
   {
-    [OperationContract]
+    [OperationContract(IsOneWay = true)]
     void MsgCallBack(string msg);
   }
 }
