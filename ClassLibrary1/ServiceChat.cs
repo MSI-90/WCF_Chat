@@ -16,12 +16,13 @@ namespace ClassLibrary1
     {
       var user = new ServerUser()
       {
-        Id = nextId++,
+        Id = nextId,
         Name = name,
         operationContext = OperationContext.Current
       };
+      nextId++;
 
-      SendMsg(user.Name + "подключился к чату!", 0);
+      SendMsg(": " + user.Name + " подключился к чату!", 0);
       users.Add(user);
       return user.Id;
     }
@@ -32,7 +33,7 @@ namespace ClassLibrary1
       if (user != null)
       {
         users.Remove(user);
-        SendMsg(user.Name + "отключился от чата!", 0);
+        SendMsg(": " + user.Name + " отключился от чата!", 0);
       }
     }
 
@@ -40,7 +41,7 @@ namespace ClassLibrary1
     {
       foreach (var item in users) 
       {
-        string answer = DateTime.Now.ToShortTimeString() + " " + msg;
+        string answer = DateTime.Now.ToShortTimeString() + " ";
         var user = users.FirstOrDefault(u => u.Id == id);
         if (user != null)
         {
