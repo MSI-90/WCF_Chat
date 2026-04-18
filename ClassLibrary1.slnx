@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="ClassLibrary1/ClassLibrary1.csproj" Id="5a83ba51-1ed4-4657-9a7a-db5f985e9539" />
+  <Project Path="ChatHost/ChatHost.csproj" Id="4c48285b-9c5f-44a6-b1ee-d6cb43b9cbf9" />
+  <Project Path="ClassLibrary1/WCF_Chat.csproj" Id="5a83ba51-1ed4-4657-9a7a-db5f985e9539" />
 </Solution>

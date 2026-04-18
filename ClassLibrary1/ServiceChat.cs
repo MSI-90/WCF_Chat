@@ -36,10 +36,6 @@ namespace ClassLibrary1
       }
     }
 
-    public void DoWork()
-    {
-    }
-
     public void SendMsg(string msg, int id)
     {
       foreach (var item in users) 
